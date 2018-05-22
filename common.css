@@ -1,0 +1,65 @@
+.home-link {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 90px;
+}
+.top-banner {
+  background-color: hsla(360, 100%, 100%, 0.6);
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+}
+.top-banner h1 {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.top-banner img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img.home-link.with-spin:hover {
+  animation: myrotate 1s linear 1;
+}
+@keyframes myrotate {
+  from { transform: rotate(0); }
+  to {transform: rotate(360deg); }
+}
+.flex-container {
+  background-color: hsla(360, 100%, 100%, 0.6);
+  position: relative;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.content {
+  background-color: hsla(360, 100%, 0%, 0.2);
+  padding: 20px;
+  margin: 20px;
+}
+.content.wide {
+  flex: 2;
+  margin-right: 0;
+}
+.content.narrow {
+  flex: 1;
+}
+.content li {
+  font-family: sans-serif, arial;
+}
+.content.iframe-content {
+  display: flex;
+}
+.content.iframe-content div {
+  margin-left: 20px;
+}
+.content.iframe-content div p:first-child {
+  margin-top: 0;
+}
+.content h1 {
+  margin: 0;
+}

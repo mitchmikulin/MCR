@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Danger Days: The True Lives of the Fabulous Killjoys</title>
+    <link rel="stylesheet" type="text/css" href="danger-parallax.css">
+  </head>
+  <body onload="setLayersAndOffset()">
+    <a href="index.html" class="home-link"><img src="images/mcrx.png"></a>
+    <img src="images/ddays-title.png" id="title">
+    <div id="parallax-box" onmousemove="parallaxChildren()">
+      <div class="parallax-layer" id="layer1">
+        <!-- img src="images/ddays-squad.png" id="#killjoys"-->
+        <img src="images/spider-white.png" id="spider">
+      </div>
+    </div>
+    <script type="text/javascript">
+      // thank you https://codepen.io/vahidseo/pen/qahfL
+      // for the Mouse movement parallax effect
+      var parallaxBox;
+      var layer1;
+
+      window.onresize = positionParallaxItems;
+
+      function setLayersAndOffset() {
+        parallaxBox = document.getElementById("parallax-box");
+        layer1 = document.getElementById("layer1");
+
+        positionParallaxItems();
+      }
+
+      function positionParallaxItems() {
+        // horizontal center layer1
+        layer1 && (layer1.style.transform = "translate(" + ((parallaxBox.offsetWidth - layer1.offsetWidth) / 2) + "px, 0px)");
+      }
+
+      function parallaxChildren() {
+        var event = window.event;
+        var x = event.clientX - parallaxBox.offsetLeft;
+        var y = event.clientY - parallaxBox.offsetTop;
+
+        mouseParallax(layer1, x, y, 25);
+      }
+
+      function mouseParallax ( obj, mouseX, mouseY, speed ) {
+      	obj.style.left = ( ( ( mouseX - ( obj.offsetWidth / 2) ) / parallaxBox.offsetWidth ) * speed ) + 'px';
+      	obj.style.top = ( ( ( mouseY - ( obj.offsetHeight / 2) ) / parallaxBox.offsetHeight ) * speed ) + 'px';
+      }
+    </script>
+  </body>
+</html>

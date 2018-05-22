@@ -1,0 +1,14 @@
+body {
+  background: url(images/dangerdays-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  font-family: sans-serif;
+}
+
+#title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="common.css">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <title>MCR</title>
+  </head>
+  <body>
+    <img id="audio-toggle" src="images/sound-off.png" onclick="enableAudioPlayer()">
+    <div class="top-banner container-smaller">
+      <h1>My Chemical Romance</h1>
+    </div>
+    <div class="nav-wrapper">
+      <div class="nav bullets" onmouseover="playSong('music/bullets.m4a')" onmouseout="stopSong()">
+        <a href="bullets.html">
+          <div class="nav-cover"></div>
+        </a>
+      </div>
+      <div class="nav revenge" onmouseover="playSong('music/revenge.m4a')" onmouseout="stopSong()">
+        <a href="revenge.html">
+          <div class="nav-cover"></div>
+        </a>
+      </div>
+      <div class="nav parade" onmouseover="playSong('music/parade.m4a')" onmouseout="stopSong()">
+        <a href="parade.html">
+          <div class="nav-cover"></div>
+        </a>
+      </div>
+      <div class="nav danger" onmouseover="playSong('music/danger.m4a')" onmouseout="stopSong()">
+        <a href="danger.html">
+          <div class="nav-cover"></div>
+        </a>
+      </div>
+      <div class="nav weapons" onmouseover="playSong('music/weapons.m4a')" onmouseout="stopSong()">
+        <a href="weapons.html">
+          <div class="nav-cover"></div>
+        </a>
+      </div>
+      <div class="nav solo" onmouseover="playSong('music/solo.m4a')" onmouseout="stopSong()">
+        <a href="solo.html">
+          <div class="nav-cover"></div>
+        </a>
+      </div>
+    </div>
+    <div class="flex-container container-smaller">
+      <div class="content">
+        <p>
+My Chemical Romance (often abbreviated as MCR) was an American rock band from Newark, New Jersey, active from 2001 to 2013. The band's best-known lineup consisted of lead vocalist Gerard Way, guitarists Ray Toro and Frank Iero and bassist Mikey Way, accompanied since 2007 by keyboardist James Dewees. Founded by Gerard, Mikey, Toro, Matt Pelissier, and later joined by Iero, the band signed to Eyeball Records and released their debut album I Brought You My Bullets, You Brought Me Your Love in 2002. They signed with Reprise Records the next year and released their major label debut Three Cheers for Sweet Revenge in 2004. Shortly after the album's release, Pelissier was replaced by Bob Bryar. A commercial success, the album was awarded platinum status over a year later.</p>
+        <p>The band eclipsed their previous success with their 2006 concept album, The Black Parade, which gained generally favorable reviews among music critics and was certified double platinum in the United States and the United Kingdom, the band's first and only double platinum. After the departure of long-time drummer Bob Bryar in March 2010, the band released their fourth studio album, Danger Days: The True Lives of the Fabulous Killjoys, in November that same year, to positive reviews. After the addition of touring keyboardist James Dewees in 2012 and the release of Conventional Weapons, a series of singles recorded in 2009, released over the course of five months, the band announced its break-up on March 22, 2013, one month after the final release in the Conventional Weapons series. After the band's split, a greatest hits album entitled May Death Never Stop You was released in March 2014. A tenth anniversary reissue of The Black Parade was released in September 2016 titled The Black Parade/Living with Ghosts.</p>
+        <p>The band was formed by frontman Gerard Way and drummer Matt Pelissier soon after the September 11 attacks. Witnessing the World Trade Center towers fall influenced Way's life to the extent that he decided to start a band. Way wrote the song "Skylines and Turnstiles" to express his feelings about September 11 and shortly thereafter, Ray Toro was recruited as the band's guitarist because at the time Way could not sing and play the guitar simultaneously. The name of the band was suggested by bass guitarist Mikey Way, younger brother of Gerard, who was working in a Barnes & Noble when he was struck by the title of a book by Irvine Welsh named Ecstasy: Three Tales of Chemical Romance. The first recording sessions were undertaken in Pelissier's attic, where the songs "Our Lady of Sorrows" and "Cubicles" were recorded. The band refers to those sessions as "The Attic Demos." After hearing the demo and dropping out of college, Mikey Way decided to join the band. While with Eyeball Records, the band met Frank Iero, the lead vocalist and guitarist for Pencey Prep. Following Pencey Prep's split in 2002, Iero became a member of My Chemical Romance, just days prior to the recording of the band's debut album. They recorded their debut album, I Brought You My Bullets, You Brought Me Your Love, just three months after the formation of the band and released it in 2002 through Eyeball Records. The album was produced by Thursday frontman Geoff Rickley after the band became friends with him while playing shows in New Jersey. Iero played guitar on two of the tracks, one of which was "Early Sunsets Over Monroeville." During this time, the band was booked at the infamous venue, Big Daddy's, where they began to receive more attention.</p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var player;
+      var muted;
+
+      function enableAudioPlayer() {
+        var img = document.getElementById("audio-toggle");
+        if (!player) {
+          player = document.createElement('audio');
+          muted = false;
+          player.setAttribute('muted', muted);
+        } else {
+          // get the current muted state
+          muted = player.getAttribute("muted") === "true";
+          // toggle the current muted state
+          muted = !muted;
+          player.setAttribute("muted", muted);
+        }
+
+        if (muted) {
+          img.setAttribute('src', 'images/sound-off.png');
+        } else {
+          img.setAttribute('src', 'images/sound-on.png');
+        }
+      }
+
+      function playSong(song) {
+        if (player && !muted) {
+          if (player.getAttribute('src') !== song) {
+            player.setAttribute('src', song);
+          }
+          player.play();
+        }
+      }
+
+      function stopSong(song) {
+        if (player) {
+          player.pause();
+        }
+      }
+    </script>
+  </body>
+</html>

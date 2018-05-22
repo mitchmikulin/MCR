@@ -1,0 +1,99 @@
+@font-face {
+  font-family: myTypewriterFont;
+  src: url(rough_typewriter/rough_typewriter.otf);
+}
+
+body {
+  background: url(images/mcr-bg6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+#audio-toggle {
+  position: absolute;
+}
+.content p:first-child {
+  margin-top: 0;
+}
+.content p:last-child {
+  margin-bottom: 0;
+}
+.container-smaller {
+  width: 84%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+.nav {
+  width: 15%;
+  height: 450px;
+}
+.nav:hover {
+  box-shadow: 7px 5px 5px #877;
+}
+.nav.bullets {
+  background: url(images/bullets.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0;
+  background-blend-mode: color-burn;
+}
+.nav.revenge {
+  background: url(images/revenge3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 35px;
+}
+.nav.parade {
+  background: url(images/parade3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -13px;
+}
+.nav.danger {
+  background: url(images/danger.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 28px;
+}
+.nav.weapons {
+  background: url(images/weapons2.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0;
+}
+.nav.solo {
+  background: url(images/solo3.jpg);
+  background-position: 34% top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 40px;
+}
+.nav-cover {
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.2;
+}
+.nav-cover:hover {
+  opacity: 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: myTypewriterFont;
+  font-size: 82px;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px #800;
+}

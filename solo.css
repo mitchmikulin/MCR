@@ -1,0 +1,25 @@
+body {
+  background: url(images/solo-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  font-family: Arial;
+}
+.top-banner h1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+.content.flex-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: stretch;
+}
+.content-section {
+  background-color: hsla(360, 100%, 100%, 0.3);
+  padding: 10px;
+  margin: 10px;
+  max-width: 50%;
+}

@@ -1,0 +1,14 @@
+body {
+  background: url(images/weapons-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left top;
+  background-attachment: fixed;
+  font-family: Arial;
+}
+.home-nav {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  cursor: pointer;
+}
